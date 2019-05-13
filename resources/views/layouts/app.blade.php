@@ -25,6 +25,9 @@
                     <li class="nav-item">
                         <a class="nav-link disabled" href="/ingredients">Sastojci</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="/tags">Tagovi</a>
+                    </li>
                     
                 </ul>
             </div>

@@ -13,6 +13,16 @@ class Meal extends Model
 
     public function category()
     {
-        return $this->belongsTo(Category::class);
+        return $this->belongsTo('App\Category');
+    }
+
+    public function ingredients()
+    {
+        return $this->belongsToMany('App\Ingredient');
+    }
+
+    public function tags()
+    {
+        return $this->belongsToMany('App\Tag');
     }
 }
