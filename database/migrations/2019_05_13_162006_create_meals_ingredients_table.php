@@ -17,7 +17,6 @@ class CreateMealsIngredientsTable extends Migration
             $table->bigIncrements('id');
             $table->integer('meal_id')->unsigned()->nullable();
             $table->integer('ingredients_id')->unsigned()->nullable();
-            $table->timestamps();
         });
     }
 

@@ -13,6 +13,7 @@
             </ul>
     
         @endforeach
+        {{ $ingredients->links() }}
             <a href="/ingredients/create" class="btn btn-dark btn-lg btn-block">Dodaj novi sastojak</a>
             <hr>
     <h1>Obrisani sastojci</h1>

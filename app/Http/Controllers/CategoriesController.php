@@ -13,7 +13,7 @@ class CategoriesController extends Controller
         
 
         $trash = Category::onlyTrashed()->get();
-        $categories = Category::all();
+        $categories = Category::paginate(5);
         return view('categories.index', compact('categories', 'trash'));
     }
 

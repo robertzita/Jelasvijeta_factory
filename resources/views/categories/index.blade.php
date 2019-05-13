@@ -13,6 +13,8 @@
             </ul>
     
         @endforeach
+
+        {{ $categories->links() }}
             <a href="/categories/create" class="btn btn-dark btn-lg btn-block">Dodaj novu kategoriju</a>
             <hr>
     <h1>Obrisane kategorije</h1>

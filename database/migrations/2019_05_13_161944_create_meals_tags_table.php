@@ -17,7 +17,6 @@ class CreateMealsTagsTable extends Migration
             $table->bigIncrements('id');
             $table->integer('meal_id')->unsigned()->nullable();
             $table->integer('tag_id')->unsigned()->nullable();
-            $table->timestamps();
         });
     }
 

@@ -13,6 +13,7 @@
             </ul>
     
         @endforeach
+        {{ $tags->links() }}
             <a href="/tags/create" class="btn btn-dark btn-lg btn-block">Dodaj novi tag</a>
             <hr>
     <h1>Obrisani tag-ovi</h1>

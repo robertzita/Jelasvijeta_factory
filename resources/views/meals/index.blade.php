@@ -13,6 +13,7 @@
             </ul>
     
         @endforeach
+        {{ $meals->links() }}
             <a href="/meals/create" class="btn btn-dark btn-lg btn-block">Dodaj novo jelo</a>
             <hr>
     <h1>Obrisana jela</h1>

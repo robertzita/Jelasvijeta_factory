@@ -13,7 +13,7 @@ class TagsController extends Controller
         
 
         $trash = Tag::onlyTrashed()->get();
-        $tags = Tag::all();
+        $tags = Tag::paginate(5);
         return view('tags.index', compact('tags', 'trash'));
     }
 

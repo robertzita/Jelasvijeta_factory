@@ -13,7 +13,7 @@ class IngredientsController extends Controller
         
 
         $trash = Ingredient::onlyTrashed()->get();
-        $ingredients = Ingredient::all();
+        $ingredients = Ingredient::paginate(5);
         return view('ingredients.index', compact('ingredients', 'trash'));
     }
 

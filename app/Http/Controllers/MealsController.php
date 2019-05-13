@@ -12,7 +12,7 @@ class MealsController extends Controller
     public function index()
     {
         
-        $meals = Meal::all();
+        $meals = Meal::paginate(5);
         $trash = Meal::onlyTrashed()->get();
         
         return view('meals.index', compact('meals','trash'));

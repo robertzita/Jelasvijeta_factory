@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+Use  DB;
 
 class Meal extends Model
 {
@@ -18,11 +19,11 @@ class Meal extends Model
 
     public function ingredients()
     {
-        return $this->belongsToMany('App\Ingredient');
+        return $this->belongsToMany('App\Ingredient', 'meals_ingredients', 'meal_id', 'ingredients_id');
     }
 
     public function tags()
     {
-        return $this->belongsToMany('App\Tag');
+        return $this->belongsToMany('App\Tag', 'meals_tags', 'meal_id', 'tag_id');
     }
 }
