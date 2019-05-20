@@ -15,4 +15,9 @@ class Category extends Model
     {
         return $this->hasMany('App\Meal');
     }
+
+    public function language()
+    {
+        return $this->belongsTo('App/Language')->withTrashed();
+    }
 }

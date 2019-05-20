@@ -16,3 +16,7 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('meals', 'MealsApiController@index');
+Route::get('meal/{id}', 'MealsApiController@show');
+Route::delete('meal/{id}', 'MealsApiController@destroy');

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 13, 2019 at 08:36 PM
+-- Generation Time: May 20, 2019 at 07:38 AM
 -- Server version: 10.1.39-MariaDB
 -- PHP Version: 7.3.5
 
@@ -32,6 +32,7 @@ CREATE TABLE `categories` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `title` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `slug` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `language_id` bigint(20) UNSIGNED DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL
@@ -41,22 +42,23 @@ CREATE TABLE `categories` (
 -- Dumping data for table `categories`
 --
 
-INSERT INTO `categories` (`id`, `title`, `slug`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'Kategorija 1', 'slug 1', '2019-05-12 07:02:37', '2019-05-12 16:04:35', NULL),
-(2, 'Kategorija 2', 'slug 2', '2019-05-12 07:04:35', '2019-05-12 07:04:35', NULL),
-(3, 'Kategorija 3', 'slug 3', '2019-05-12 07:04:52', '2019-05-12 16:17:46', NULL),
-(15, 'srtjrtj', 'srtjsrtj', '2019-05-12 16:49:32', '2019-05-12 16:49:35', '2019-05-12 16:49:35'),
-(16, 'Kategorija 12', 'slug 12', '2019-05-12 18:07:43', '2019-05-12 18:07:43', NULL),
-(17, 'Reprehenderit tenetur quasi quibusdam tempora dolores quis molestias.', 'Et ex eaque eum ex id expedita consequuntur voluptatem.', '2019-05-13 15:12:02', '2019-05-13 15:12:26', '2019-05-13 15:12:26'),
-(18, 'Corporis est aut aut harum nostrum.', 'Assumenda esse inventore omnis nobis.', '2019-05-13 15:12:02', '2019-05-13 15:12:29', '2019-05-13 15:12:29'),
-(19, 'Velit sit quaerat error et.', 'Et aut saepe et quis delectus.', '2019-05-13 15:12:02', '2019-05-13 15:12:31', '2019-05-13 15:12:31'),
-(20, 'Est occaecati vitae laborum ut assumenda incidunt.', 'Modi voluptate fugiat laudantium optio tenetur.', '2019-05-13 15:12:02', '2019-05-13 15:12:02', NULL),
-(21, 'Nisi neque ut aut corrupti aut occaecati.', 'Eveniet et error voluptatem sint aperiam quisquam non.', '2019-05-13 15:12:02', '2019-05-13 15:12:33', '2019-05-13 15:12:33'),
-(22, 'Minus ut sunt aperiam et sed blanditiis incidunt.', 'Eum nisi ipsa vel repudiandae alias esse sequi.', '2019-05-13 15:12:02', '2019-05-13 15:12:02', NULL),
-(23, 'Quo earum eos pariatur doloribus.', 'Ut optio itaque culpa eos veniam quo.', '2019-05-13 15:12:02', '2019-05-13 15:12:02', NULL),
-(24, 'Voluptatem consectetur in ipsa aliquam repudiandae in.', 'Dolores eos velit labore qui accusantium.', '2019-05-13 15:12:02', '2019-05-13 15:12:02', NULL),
-(25, 'Sint veniam expedita aut minus numquam.', 'Sunt tempore itaque beatae ut id nam.', '2019-05-13 15:12:02', '2019-05-13 15:12:02', NULL),
-(26, 'Quia optio dignissimos nobis at fugiat ut voluptatem.', 'Id assumenda quas ex minus.', '2019-05-13 15:12:02', '2019-05-13 16:00:57', NULL);
+INSERT INTO `categories` (`id`, `title`, `slug`, `language_id`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 'Kategorija 1', 'slug1', 1, '2019-05-18 15:00:58', '2019-05-18 15:00:58', NULL),
+(2, 'Kategorija 2', 'slug2', 1, '2019-05-18 15:00:58', '2019-05-18 15:00:58', NULL),
+(3, 'Kategorija 3', 'slug3', 1, '2019-05-18 15:00:58', '2019-05-18 15:00:58', NULL),
+(4, 'Kategorija 4', 'slug4', 1, '2019-05-18 15:00:58', '2019-05-18 15:00:58', NULL),
+(5, 'Kategorija 5', 'slug5', 1, '2019-05-18 15:00:58', '2019-05-18 15:00:58', NULL),
+(6, 'Kategorija 6', 'slug6', 1, '2019-05-18 15:00:58', '2019-05-18 15:00:58', NULL),
+(7, 'Aut et ullam aut iure omnis incidunt dicta ipsum.', 'Corporis et consequuntur sed enim unde.', 1, '2019-05-18 15:00:58', '2019-05-18 15:00:58', NULL),
+(8, 'Quod et sint officiis.', 'Voluptatem ut sunt ut nam laboriosam.', 2, '2019-05-18 15:00:58', '2019-05-18 15:00:58', NULL),
+(9, 'Sit doloribus commodi et est sit ut.', 'Necessitatibus debitis ut corporis aliquam qui odit.', 2, '2019-05-18 15:00:58', '2019-05-18 15:00:58', NULL),
+(10, 'Et qui voluptatem dignissimos cupiditate dolor.', 'Ut repellat tempora ut nobis.', 2, '2019-05-18 15:00:58', '2019-05-18 15:00:58', NULL),
+(11, 'Eius aut ex illum voluptates similique.', 'Totam eos ut rerum dolor voluptates.', 2, '2019-05-18 15:00:58', '2019-05-18 15:00:58', NULL),
+(12, 'Beatae fuga quisquam aut ipsum quis voluptas.', 'Dolorem voluptatibus quos sapiente.', 2, '2019-05-18 15:00:58', '2019-05-18 15:00:58', NULL),
+(13, 'Eligendi architecto sapiente quasi ducimus voluptas quo.', 'Ut quam quas et ipsum ipsam ea dignissimos.', 2, '2019-05-18 15:00:58', '2019-05-18 15:00:58', NULL),
+(14, 'Tempore ea et similique expedita totam fugit.', 'Et qui porro reprehenderit aspernatur.', 1, '2019-05-18 15:00:58', '2019-05-18 15:00:58', NULL),
+(15, 'Eaque qui non quia.', 'Est architecto sed est accusantium et recusandae alias.', 2, '2019-05-18 15:00:58', '2019-05-18 15:00:58', NULL),
+(16, 'Quasi quasi et sint suscipit incidunt blanditiis similique dolorem.', 'Ut porro deserunt rerum assumenda doloremque.', 2, '2019-05-18 15:00:58', '2019-05-18 15:00:58', NULL);
 
 -- --------------------------------------------------------
 
@@ -68,6 +70,7 @@ CREATE TABLE `ingredients` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `title` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `slug` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `language_id` bigint(20) UNSIGNED DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL
@@ -77,38 +80,66 @@ CREATE TABLE `ingredients` (
 -- Dumping data for table `ingredients`
 --
 
-INSERT INTO `ingredients` (`id`, `title`, `slug`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'sastojak 1', 'slug 1', '2019-05-13 15:00:07', '2019-05-13 15:00:14', NULL),
-(2, 'Inventore odio deleniti consequatur.', 'Dicta pariatur eum sapiente nostrum nulla animi aut.', '2019-05-13 15:18:49', '2019-05-13 15:18:49', NULL),
-(3, 'Eum harum nisi officia nulla dignissimos.', 'Necessitatibus dolor et quia aut.', '2019-05-13 15:18:49', '2019-05-13 16:03:04', NULL),
-(4, 'Est autem modi et ducimus quia est omnis vitae.', 'Sit assumenda sed iste fugit.', '2019-05-13 15:18:49', '2019-05-13 15:20:55', '2019-05-13 15:20:55'),
-(5, 'Sed voluptas deleniti ea iusto.', 'Modi reprehenderit eius maxime.', '2019-05-13 15:18:49', '2019-05-13 16:03:05', NULL),
-(6, 'Totam ipsum doloribus quas nulla excepturi.', 'Excepturi fugit sunt ut perferendis corporis.', '2019-05-13 15:18:49', '2019-05-13 16:03:01', NULL),
-(7, 'Perspiciatis neque modi quis velit qui ut.', 'Quos explicabo voluptas libero ratione molestiae.', '2019-05-13 15:18:49', '2019-05-13 15:18:49', NULL),
-(8, 'Nulla sed nemo laboriosam rerum quo placeat.', 'Magni laudantium harum eum nihil iste.', '2019-05-13 15:18:49', '2019-05-13 16:02:59', NULL),
-(9, 'Labore excepturi praesentium dolor eum praesentium eaque incidunt.', 'Sequi voluptas et possimus et molestiae soluta totam cum.', '2019-05-13 15:18:49', '2019-05-13 16:03:02', NULL),
-(10, 'Odit incidunt error est temporibus iusto doloremque asperiores.', 'Ipsa consequatur voluptatem tempora dolorem et consequatur omnis.', '2019-05-13 15:18:49', '2019-05-13 15:20:41', '2019-05-13 15:20:41'),
-(11, 'Voluptatem rerum fugit necessitatibus et.', 'Qui enim architecto veritatis ut architecto vel.', '2019-05-13 15:18:49', '2019-05-13 15:20:43', '2019-05-13 15:20:43'),
-(12, 'Quidem nihil culpa possimus corrupti.', 'Ea id neque eum fugiat pariatur voluptatibus porro quisquam.', '2019-05-13 15:18:49', '2019-05-13 15:18:49', NULL),
-(13, 'Dolores optio culpa accusantium voluptatem.', 'Molestias optio aut accusamus numquam libero.', '2019-05-13 15:18:49', '2019-05-13 15:18:49', NULL),
-(14, 'Minima sit odit ducimus qui.', 'Eos dicta ea iure odit doloribus ut.', '2019-05-13 15:18:49', '2019-05-13 15:18:49', NULL),
-(15, 'Et similique autem sit delectus ullam magnam reprehenderit.', 'Minima velit velit eos a.', '2019-05-13 15:18:49', '2019-05-13 15:18:49', NULL),
-(16, 'Inventore quaerat illum voluptatem dolores vero at laborum.', 'Nam rem illum vel ducimus et omnis.', '2019-05-13 15:18:49', '2019-05-13 15:18:49', NULL),
-(17, 'Sed explicabo iusto rerum dignissimos.', 'Laudantium dolores cumque est est ratione perferendis occaecati eligendi.', '2019-05-13 15:18:49', '2019-05-13 15:18:49', NULL),
-(18, 'Architecto et aut nobis.', 'Dolore et et ea enim repellendus.', '2019-05-13 15:18:49', '2019-05-13 15:20:53', '2019-05-13 15:20:53'),
-(19, 'Velit voluptas voluptas aliquam est maiores deserunt nihil.', 'Molestiae adipisci qui earum eligendi.', '2019-05-13 15:18:49', '2019-05-13 15:18:49', NULL),
-(20, 'Sint amet quis exercitationem sit libero magnam.', 'Quia est accusamus aspernatur alias recusandae asperiores.', '2019-05-13 15:18:49', '2019-05-13 15:18:49', NULL),
-(21, 'Laborum sunt omnis odio quo.', 'Eius ut recusandae excepturi sit.', '2019-05-13 15:18:49', '2019-05-13 15:18:49', NULL),
-(22, 'Recusandae nisi et rerum.', 'Hic illo nisi consequatur ut pariatur ut natus.', '2019-05-13 15:18:49', '2019-05-13 15:18:49', NULL),
-(23, 'Sit expedita aperiam praesentium odio.', 'Occaecati iure quis illum.', '2019-05-13 15:18:49', '2019-05-13 15:18:49', NULL),
-(24, 'Ut est voluptatem facere earum.', 'Labore cupiditate aut quae atque dolor.', '2019-05-13 15:18:49', '2019-05-13 15:18:49', NULL),
-(25, 'A aut quo animi voluptas ea aliquam.', 'Quam ex dolorem ut.', '2019-05-13 15:18:49', '2019-05-13 15:18:49', NULL),
-(26, 'Quia molestiae voluptate accusamus et est dolore ullam.', 'Voluptas aperiam ratione voluptas.', '2019-05-13 15:18:49', '2019-05-13 15:18:49', NULL),
-(27, 'Nostrum praesentium fugit dolorem libero.', 'Quibusdam molestias quia maxime molestiae unde culpa.', '2019-05-13 15:18:49', '2019-05-13 15:18:49', NULL),
-(28, 'Magni dolor animi nihil sint odio non.', 'Quo voluptatem qui facere dignissimos porro voluptas dolorem.', '2019-05-13 15:18:49', '2019-05-13 15:18:49', NULL),
-(29, 'Voluptates repellat nesciunt sapiente autem.', 'Modi qui odit quae aut voluptatum placeat neque.', '2019-05-13 15:18:49', '2019-05-13 16:02:58', NULL),
-(30, 'Voluptatum accusantium in consequatur consequatur eum.', 'Dolorum quia est libero qui qui incidunt culpa.', '2019-05-13 15:18:49', '2019-05-13 15:18:49', NULL),
-(31, 'Odit qui dolor saepe eos modi eligendi dignissimos ea.', 'Consequatur incidunt aut tenetur et.', '2019-05-13 15:18:49', '2019-05-13 15:18:49', NULL);
+INSERT INTO `ingredients` (`id`, `title`, `slug`, `language_id`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 'Sastojak 1', 'slug1', 1, '2019-05-18 15:01:41', '2019-05-18 15:01:41', NULL),
+(2, 'Sastojak 2', 'slug2', 1, '2019-05-18 15:01:41', '2019-05-18 15:01:41', NULL),
+(3, 'Sastojak 3', 'slug3', 1, '2019-05-18 15:01:41', '2019-05-18 15:01:41', NULL),
+(4, 'Sastojak 4', 'slug4', 1, '2019-05-18 15:01:41', '2019-05-18 15:01:41', NULL),
+(5, 'Sastojak 5', 'slug5', 1, '2019-05-18 15:01:41', '2019-05-18 15:01:41', NULL),
+(6, 'Sastojak 6', 'slug6', 1, '2019-05-18 15:01:41', '2019-05-18 15:01:41', NULL),
+(7, 'Nobis nesciunt quam et excepturi vitae totam qui.', 'Qui dolor suscipit dolorum quae perspiciatis aut.', 1, '2019-05-18 15:01:41', '2019-05-18 15:01:41', NULL),
+(8, 'Molestiae et alias consectetur sed.', 'Animi ea libero eum nesciunt ab.', 2, '2019-05-18 15:01:41', '2019-05-18 15:01:41', NULL),
+(9, 'Qui labore rem esse ea voluptatum et fugit.', 'Est eius dolorem et.', 1, '2019-05-18 15:01:41', '2019-05-18 15:01:41', NULL),
+(10, 'Veniam aut qui quae ratione est autem ullam.', 'Accusantium accusamus error quidem quibusdam est sit.', 1, '2019-05-18 15:01:41', '2019-05-18 15:01:41', NULL),
+(11, 'Sit excepturi autem commodi aut harum.', 'Dolor voluptatem blanditiis qui sequi.', 2, '2019-05-18 15:01:41', '2019-05-18 15:01:41', NULL),
+(12, 'Earum consequuntur omnis quaerat fugiat possimus animi amet.', 'Alias sed non adipisci cumque omnis et ut.', 1, '2019-05-18 15:01:41', '2019-05-18 15:01:41', NULL),
+(13, 'Ipsum consequatur atque at amet veniam deleniti accusantium.', 'Vero sunt quidem quod deserunt.', 1, '2019-05-18 15:01:41', '2019-05-18 15:01:41', NULL),
+(14, 'Sunt voluptatem et voluptatem ipsa.', 'Vel omnis est omnis sequi eos tempore.', 1, '2019-05-18 15:01:41', '2019-05-18 15:01:41', NULL),
+(15, 'Laboriosam qui et et dolorem.', 'Expedita dolores veritatis enim explicabo ut ratione.', 2, '2019-05-18 15:01:41', '2019-05-18 15:01:41', NULL),
+(16, 'Cum porro modi iusto.', 'Debitis alias in aliquid pariatur perspiciatis natus ut nihil.', 2, '2019-05-18 15:01:41', '2019-05-18 15:01:41', NULL),
+(17, 'Atque dolores reprehenderit illo et.', 'Vel fugit rem quo veritatis impedit molestias.', 2, '2019-05-18 15:01:41', '2019-05-18 15:01:41', NULL),
+(18, 'Eos dolores consequatur impedit dolores.', 'Soluta perferendis sunt maiores ut sint.', 2, '2019-05-18 15:01:41', '2019-05-18 15:01:41', NULL),
+(19, 'Autem perspiciatis natus fugiat qui quos minus aut.', 'Dolor ut ut blanditiis porro repudiandae.', 1, '2019-05-18 15:01:41', '2019-05-18 15:01:41', NULL),
+(20, 'Excepturi laborum aut qui voluptas voluptatem voluptates autem.', 'Repellendus rem facere distinctio enim optio rerum deserunt.', 1, '2019-05-18 15:01:41', '2019-05-18 15:01:41', NULL),
+(21, 'Ut voluptatem est et magni vitae sequi porro in.', 'Officiis qui eaque numquam odit molestias quidem.', 1, '2019-05-18 15:01:41', '2019-05-18 15:01:41', NULL),
+(22, 'Hic atque ut et accusamus.', 'Nobis rerum et enim rerum.', 2, '2019-05-18 15:01:41', '2019-05-18 15:01:41', NULL),
+(23, 'Omnis atque perspiciatis est quo eveniet occaecati.', 'Soluta et et impedit et facere itaque eos.', 1, '2019-05-18 15:01:41', '2019-05-18 15:01:41', NULL),
+(24, 'Est soluta vel illum explicabo.', 'Quia quis fugiat qui dolor neque.', 1, '2019-05-18 15:01:41', '2019-05-18 15:01:41', NULL),
+(25, 'Occaecati temporibus dolorum aut.', 'Nisi possimus corrupti repellat tempora voluptatum magni quia.', 2, '2019-05-18 15:01:41', '2019-05-18 15:01:41', NULL),
+(26, 'Laboriosam nam ex consequatur illum voluptatibus ea alias.', 'Hic provident molestiae quia illo consequatur aliquid beatae.', 1, '2019-05-18 15:01:41', '2019-05-18 15:01:41', NULL),
+(27, 'Voluptatem molestiae id nihil.', 'Ea ea molestiae dolores voluptatem.', 1, '2019-05-18 15:01:41', '2019-05-18 15:01:41', NULL),
+(28, 'Consequuntur sunt rem officiis nobis.', 'Repellat vel et ipsum quia ratione.', 2, '2019-05-18 15:01:41', '2019-05-18 15:01:41', NULL),
+(29, 'Corrupti earum in voluptas accusamus quasi nihil.', 'Explicabo et impedit sapiente incidunt omnis a.', 2, '2019-05-18 15:01:41', '2019-05-18 15:01:41', NULL),
+(30, 'Itaque delectus fuga fuga sequi.', 'Rerum accusamus reiciendis dicta dolor et officiis eum quo.', 1, '2019-05-18 15:01:41', '2019-05-18 15:01:41', NULL),
+(31, 'Qui est tenetur aut est velit nobis.', 'Sed aperiam temporibus adipisci et aperiam eum illo.', 2, '2019-05-18 15:01:41', '2019-05-18 15:01:41', NULL),
+(32, 'Error esse sit omnis est quis enim quasi itaque.', 'Sed totam amet labore unde fuga pariatur.', 2, '2019-05-18 15:01:41', '2019-05-18 15:01:41', NULL),
+(33, 'Aut rem temporibus nostrum velit quia.', 'Quo ut totam ut quia.', 1, '2019-05-18 15:01:41', '2019-05-18 15:01:41', NULL),
+(34, 'Voluptatem aperiam autem ipsa alias.', 'Culpa consequatur animi et excepturi dicta corporis quis.', 2, '2019-05-18 15:01:41', '2019-05-18 15:01:41', NULL),
+(35, 'Illo adipisci dolor velit aut.', 'Quasi vero incidunt quos voluptatem ut doloribus.', 1, '2019-05-18 15:01:41', '2019-05-18 15:01:41', NULL),
+(36, 'Aut dignissimos ipsum vitae nesciunt ab sit rerum.', 'Magni recusandae pariatur et quas rerum et hic.', 2, '2019-05-18 15:01:41', '2019-05-18 15:01:41', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `languages`
+--
+
+CREATE TABLE `languages` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `title` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `slug` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `iso_label` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `languages`
+--
+
+INSERT INTO `languages` (`id`, `title`, `slug`, `iso_label`, `created_at`, `updated_at`) VALUES
+(1, 'Hrvatski jezik', 'hrvatski-jezik', 'hr', '2019-05-18 15:00:48', '2019-05-18 15:00:48'),
+(2, 'Engleski jezik', 'engleski-jezik', 'en', '2019-05-18 15:00:48', '2019-05-18 15:00:48');
 
 -- --------------------------------------------------------
 
@@ -122,6 +153,7 @@ CREATE TABLE `meals` (
   `slug` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `description` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `category_id` bigint(20) UNSIGNED DEFAULT NULL,
+  `language_id` bigint(20) UNSIGNED DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL
@@ -131,22 +163,25 @@ CREATE TABLE `meals` (
 -- Dumping data for table `meals`
 --
 
-INSERT INTO `meals` (`id`, `title`, `slug`, `description`, `category_id`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(3, 'Jelo 3', 'slug 3', 'opis 3', 3, '2019-05-12 14:54:12', '2019-05-12 16:58:53', NULL),
-(6, 'Jelo 1', 'slug 1', 'opis 1', 3, '2019-05-12 17:22:56', '2019-05-13 16:33:58', NULL),
-(7, 'aahr5', 'slug 12', 'opis4', 1, '2019-05-12 17:52:57', '2019-05-12 19:12:05', NULL),
-(16, 'JELO 4', 'slug 4', 'opis 4', NULL, '2019-05-12 19:08:37', '2019-05-12 19:12:03', NULL),
-(17, 'ahejtr', 'eajej', 'aejaej', NULL, '2019-05-12 19:12:11', '2019-05-12 19:12:26', '2019-05-12 19:12:26'),
-(18, 'Doloribus repudiandae voluptatem sunt ut cumque qui accusantium.', 'Accusamus consequatur commodi temporibus deserunt veniam enim.', 'Dolores ratione saepe esse molestiae architecto blanditiis.', NULL, '2019-05-13 15:17:03', '2019-05-13 15:20:29', '2019-05-13 15:20:29'),
-(19, 'Ut consequatur labore ut est.', 'Blanditiis qui vero id vel consequatur quia.', 'Quis ut et quae porro est similique nihil.', NULL, '2019-05-13 15:17:03', '2019-05-13 15:20:18', '2019-05-13 15:20:18'),
-(20, 'Ratione aliquid deserunt rerum ipsam odit illo quae.', 'Fugit accusamus omnis nam esse quia.', 'Qui eius rerum non.', NULL, '2019-05-13 15:17:03', '2019-05-13 15:17:03', NULL),
-(21, 'Incidunt consectetur porro atque magni.', 'Exercitationem omnis quia vel commodi qui tenetur quod.', 'Soluta ut rerum ipsa sit ut quod.', NULL, '2019-05-13 15:17:03', '2019-05-13 15:20:20', '2019-05-13 15:20:20'),
-(22, 'Accusantium quisquam consectetur et enim.', 'Ut recusandae iusto consequatur ad quia in.', 'Similique consequatur rem eos delectus.', NULL, '2019-05-13 15:17:03', '2019-05-13 15:20:27', '2019-05-13 15:20:27'),
-(23, 'Autem eaque quo consequatur adipisci unde inventore.', 'Optio provident est mollitia non eos.', 'Ut magnam dolor soluta ut assumenda.', NULL, '2019-05-13 15:17:03', '2019-05-13 15:20:22', '2019-05-13 15:20:22'),
-(24, 'Sunt fuga omnis alias et architecto.', 'Et qui impedit hic voluptate.', 'Vel dolorem qui nemo est illo et ut.', NULL, '2019-05-13 15:17:03', '2019-05-13 15:17:03', NULL),
-(25, 'Nulla omnis adipisci vel eligendi quidem.', 'Quia et dignissimos cumque est nisi sit.', 'Et nobis quia laudantium.', NULL, '2019-05-13 15:17:03', '2019-05-13 15:20:16', '2019-05-13 15:20:16'),
-(26, 'Nemo et dicta quia ipsam possimus.', 'Corrupti ut quam illum ut neque.', 'Autem vitae commodi quo.', NULL, '2019-05-13 15:17:03', '2019-05-13 15:17:03', NULL),
-(27, 'Placeat omnis cupiditate mollitia quasi sit.', 'Sit sit rerum accusamus et incidunt.', 'Aliquam in occaecati voluptatem iste quod aliquam quis.', NULL, '2019-05-13 15:17:03', '2019-05-13 15:17:03', NULL);
+INSERT INTO `meals` (`id`, `title`, `slug`, `description`, `category_id`, `language_id`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 'Jelo 1', 'jelo1', 'opis1', 1, 2, '2019-05-18 15:01:52', '2019-05-18 15:01:52', NULL),
+(2, 'Jelo 2', 'jelo2', 'opis2', 1, 2, '2019-05-18 15:01:52', '2019-05-18 15:01:52', NULL),
+(3, 'Jelo 3', 'jelo3', 'opis3', 1, 2, '2019-05-18 15:01:52', '2019-05-18 15:01:52', NULL),
+(4, 'Jelo 4', 'jelo4', 'opis4', 2, 2, '2019-05-18 15:01:52', '2019-05-18 15:01:52', NULL),
+(5, 'Jelo 5', 'jelo5', 'opis5', 2, 2, '2019-05-18 15:01:52', '2019-05-18 15:01:52', NULL),
+(6, 'Jelo 6', 'jelo6', 'opis6', 1, 2, '2019-05-18 15:01:52', '2019-05-18 15:01:52', NULL),
+(7, 'Jelo 7', 'jelo7', 'opis7', 1, 2, '2019-05-18 15:01:52', '2019-05-18 15:01:52', NULL),
+(8, 'Jelo 8', 'jelo8', 'opis8', 3, 2, '2019-05-18 15:01:52', '2019-05-18 15:01:52', NULL),
+(9, 'Repellendus qui vitae illum non omnis quis.', 'Qui nesciunt aut voluptatem in quaerat itaque.', 'Aliquid consequatur fugit perferendis et.', 6, 1, '2019-05-18 15:01:52', '2019-05-18 15:01:52', NULL),
+(10, 'Alias molestiae deleniti quisquam tempore possimus voluptatem veniam.', 'Voluptas sint quisquam dignissimos dolorem.', 'Vitae iste dolor quod modi aperiam repudiandae reprehenderit.', 1, 2, '2019-05-18 15:01:52', '2019-05-18 15:01:52', NULL),
+(11, 'Optio iure tempora omnis aliquam omnis sed voluptatem.', 'Eaque et dicta velit quam facilis.', 'Animi et distinctio quos ducimus.', 3, 2, '2019-05-18 15:01:52', '2019-05-18 15:01:52', NULL),
+(12, 'Non inventore soluta odit numquam.', 'Facere libero facere error.', 'Pariatur molestiae sed facilis dolor saepe illo atque.', 5, 2, '2019-05-18 15:01:52', '2019-05-18 15:01:52', NULL),
+(13, 'Eos est quo fugiat placeat aut.', 'Voluptas voluptas totam facilis consequuntur maiores.', 'Mollitia deserunt atque aut.', 3, 2, '2019-05-18 15:01:52', '2019-05-18 15:01:52', NULL),
+(14, 'Nesciunt illum dolorum voluptatem ullam dolores culpa eum.', 'Qui delectus consequatur exercitationem quae labore magnam.', 'Soluta voluptas sunt hic accusamus repudiandae et deserunt.', 3, 1, '2019-05-18 15:01:52', '2019-05-18 15:01:52', NULL),
+(15, 'Minima praesentium ea aut quo dolor.', 'Tenetur ipsam id reiciendis voluptatem molestias dolorum molestias.', 'Unde autem est mollitia placeat alias.', 2, 2, '2019-05-18 15:01:52', '2019-05-18 15:01:52', NULL),
+(16, 'Vel perferendis sequi accusamus dolor.', 'Ab enim quis omnis ut.', 'Hic qui dolorem vel quis eum.', 4, 2, '2019-05-18 15:01:52', '2019-05-18 15:01:52', NULL),
+(17, 'Tempore ut doloribus est ab autem.', 'Et sed est vel vel nulla qui aut quam.', 'Perferendis impedit numquam non magnam ut voluptatibus consequatur.', 4, 1, '2019-05-18 15:01:52', '2019-05-18 15:01:52', NULL),
+(18, 'Ipsa ut laborum qui nesciunt modi molestias.', 'Enim voluptates non libero tenetur sit ullam qui.', 'Natus minus ut tempore sint vel.', 6, 1, '2019-05-18 15:01:52', '2019-05-18 15:01:52', NULL);
 
 -- --------------------------------------------------------
 
@@ -155,22 +190,22 @@ INSERT INTO `meals` (`id`, `title`, `slug`, `description`, `category_id`, `creat
 --
 
 CREATE TABLE `meals_ingredients` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `meal_id` int(10) UNSIGNED DEFAULT NULL,
-  `ingredients_id` int(10) UNSIGNED DEFAULT NULL
+  `meal_id` bigint(20) UNSIGNED DEFAULT NULL,
+  `ingredients_id` bigint(20) UNSIGNED DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `meals_ingredients`
 --
 
-INSERT INTO `meals_ingredients` (`id`, `meal_id`, `ingredients_id`) VALUES
-(1, 4, 3),
-(2, 7, 2),
-(3, 5, 3),
-(4, 9, 7),
-(5, 2, 2),
-(6, 3, 6);
+INSERT INTO `meals_ingredients` (`meal_id`, `ingredients_id`) VALUES
+(1, 1),
+(1, 2),
+(1, 3),
+(2, 3),
+(2, 5),
+(3, 5),
+(4, 4);
 
 -- --------------------------------------------------------
 
@@ -179,20 +214,25 @@ INSERT INTO `meals_ingredients` (`id`, `meal_id`, `ingredients_id`) VALUES
 --
 
 CREATE TABLE `meals_tags` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `meal_id` int(10) UNSIGNED DEFAULT NULL,
-  `tag_id` int(10) UNSIGNED DEFAULT NULL
+  `meal_id` bigint(20) UNSIGNED DEFAULT NULL,
+  `tag_id` bigint(20) UNSIGNED DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `meals_tags`
 --
 
-INSERT INTO `meals_tags` (`id`, `meal_id`, `tag_id`) VALUES
-(1, 4, 3),
-(2, 6, 2),
-(3, 3, 2),
-(4, 4, 5);
+INSERT INTO `meals_tags` (`meal_id`, `tag_id`) VALUES
+(1, 1),
+(2, 2),
+(3, 3),
+(2, 5),
+(3, 5),
+(4, 6),
+(5, 7),
+(6, 8),
+(7, 8),
+(9, 10);
 
 -- --------------------------------------------------------
 
@@ -213,12 +253,13 @@ CREATE TABLE `migrations` (
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (1, '2014_10_12_000000_create_users_table', 1),
 (2, '2014_10_12_100000_create_password_resets_table', 1),
-(3, '2019_05_12_084558_create_categories_table', 1),
-(5, '2019_05_12_163636_create_meals_table', 2),
-(6, '2019_05_13_161850_create_ingredients_table', 3),
-(7, '2019_05_13_161913_create_tags_table', 3),
-(8, '2019_05_13_161944_create_meals_tags_table', 3),
-(9, '2019_05_13_162006_create_meals_ingredients_table', 3);
+(3, '2019_05_16_160042_create_languages_table', 1),
+(4, '2019_05_16_162645_create_categories_table', 1),
+(5, '2019_05_16_162718_create_meals_table', 1),
+(6, '2019_05_16_162753_create_ingredients_table', 1),
+(7, '2019_05_16_162823_create_tags_table', 1),
+(8, '2019_05_16_162856_create_meals_tags_table', 1),
+(9, '2019_05_16_162926_create_meals_ingredients_table', 1);
 
 -- --------------------------------------------------------
 
@@ -242,6 +283,7 @@ CREATE TABLE `tags` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `title` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `slug` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `language_id` bigint(20) UNSIGNED DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL
@@ -251,39 +293,42 @@ CREATE TABLE `tags` (
 -- Dumping data for table `tags`
 --
 
-INSERT INTO `tags` (`id`, `title`, `slug`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'Tag 1', 'slug 1', '2019-05-13 15:05:44', '2019-05-13 16:35:25', NULL),
-(2, 'tag 2', 'slug 2', '2019-05-13 15:05:57', '2019-05-13 15:05:57', NULL),
-(3, 'Autem molestiae modi laudantium rerum labore.', 'Nemo dolores eum commodi sit minima et officiis.', '2019-05-13 15:19:51', '2019-05-13 15:21:03', '2019-05-13 15:21:03'),
-(4, 'Tag 3', 'slug 3', '2019-05-13 15:19:51', '2019-05-13 15:21:35', NULL),
-(5, 'Consequatur ullam sed nemo asperiores odit non.', 'Laborum laborum odio optio nulla qui velit excepturi.', '2019-05-13 15:19:51', '2019-05-13 15:19:51', NULL),
-(6, 'Iure rem ea aperiam neque consectetur omnis voluptatem.', 'Et quos architecto quo harum eos.', '2019-05-13 15:19:51', '2019-05-13 15:21:05', '2019-05-13 15:21:05'),
-(7, 'Rerum nemo pariatur dicta qui voluptatibus excepturi rerum.', 'Nostrum aperiam suscipit omnis eaque.', '2019-05-13 15:19:51', '2019-05-13 15:19:51', NULL),
-(8, 'Hic sapiente molestiae iusto omnis.', 'Qui ad quae eveniet pariatur aut velit deserunt deserunt.', '2019-05-13 15:19:51', '2019-05-13 15:21:17', '2019-05-13 15:21:17'),
-(9, 'Sed expedita architecto pariatur.', 'Saepe et tempora laboriosam occaecati molestias.', '2019-05-13 15:19:51', '2019-05-13 15:21:07', '2019-05-13 15:21:07'),
-(10, 'Aliquam ea in quod rerum.', 'Voluptatem enim sed mollitia.', '2019-05-13 15:19:51', '2019-05-13 15:21:11', '2019-05-13 15:21:11'),
-(11, 'Voluptatem numquam quia at assumenda quia aut earum impedit.', 'Reiciendis reprehenderit voluptates est reiciendis qui quasi et ea.', '2019-05-13 15:19:51', '2019-05-13 15:21:09', '2019-05-13 15:21:09'),
-(12, 'Ipsam et voluptatem officia quam quia.', 'Eum quasi praesentium recusandae sed.', '2019-05-13 15:19:51', '2019-05-13 15:19:51', NULL),
-(13, 'Eligendi praesentium qui similique iste fugiat tempora ut temporibus.', 'Perferendis officiis tempore sapiente nihil.', '2019-05-13 15:19:51', '2019-05-13 15:21:19', '2019-05-13 15:21:19'),
-(14, 'Vel in et velit expedita sunt voluptas aut unde.', 'Tenetur vitae quis nemo voluptatibus placeat sed sit.', '2019-05-13 15:19:51', '2019-05-13 15:21:13', '2019-05-13 15:21:13'),
-(15, 'Rem nam omnis voluptates dignissimos nulla quos.', 'Animi perferendis eaque expedita id et ut assumenda.', '2019-05-13 15:19:51', '2019-05-13 15:21:15', '2019-05-13 15:21:15'),
-(16, 'Autem aspernatur commodi aut sint officia voluptatum laboriosam.', 'Explicabo quo iusto molestiae hic iste alias.', '2019-05-13 15:19:51', '2019-05-13 15:19:51', NULL),
-(17, 'Veniam et modi minus.', 'Impedit magnam sed repellat earum vel et occaecati.', '2019-05-13 15:19:51', '2019-05-13 15:19:51', NULL),
-(18, 'Maxime architecto nisi consequatur eius repudiandae alias.', 'Modi consequatur quos soluta et ea facere odit sit.', '2019-05-13 15:19:51', '2019-05-13 15:19:51', NULL),
-(19, 'Quia velit autem laborum fuga et non.', 'Aliquam nulla officia dolor fugiat quo.', '2019-05-13 15:19:51', '2019-05-13 15:19:51', NULL),
-(20, 'Aut harum assumenda aut officia nihil sit.', 'Vel molestiae non fuga pariatur rem.', '2019-05-13 15:19:51', '2019-05-13 15:19:51', NULL),
-(21, 'Vel quo voluptatibus id perspiciatis.', 'Vel eius tempora ea.', '2019-05-13 15:19:51', '2019-05-13 15:19:51', NULL),
-(22, 'Ullam culpa ut est in necessitatibus quae voluptatibus.', 'Architecto et cum nisi sit sunt repellat.', '2019-05-13 15:19:51', '2019-05-13 15:19:51', NULL),
-(23, 'Nam quos unde voluptatem.', 'Reprehenderit et mollitia odit saepe saepe vero.', '2019-05-13 15:19:51', '2019-05-13 15:19:51', NULL),
-(24, 'Asperiores odio voluptatem inventore voluptatibus totam libero.', 'Esse non soluta sed vel et.', '2019-05-13 15:19:51', '2019-05-13 15:19:51', NULL),
-(25, 'Eum ut ab ea necessitatibus et molestiae unde.', 'Sed quas magnam quia fugiat debitis minima.', '2019-05-13 15:19:51', '2019-05-13 15:19:51', NULL),
-(26, 'Deserunt earum quo aut iusto omnis nam necessitatibus.', 'Deleniti incidunt temporibus incidunt molestiae eos aut.', '2019-05-13 15:19:51', '2019-05-13 15:19:51', NULL),
-(27, 'Quidem accusamus amet ut soluta architecto.', 'Esse aut quisquam debitis sequi architecto voluptatem et.', '2019-05-13 15:19:51', '2019-05-13 15:19:51', NULL),
-(28, 'Ducimus saepe culpa distinctio officiis labore.', 'Ea magnam earum veritatis.', '2019-05-13 15:19:51', '2019-05-13 15:19:51', NULL),
-(29, 'Et minus vel id officia.', 'Et et sequi tempora possimus soluta voluptas quia nam.', '2019-05-13 15:19:51', '2019-05-13 15:19:51', NULL),
-(30, 'Facere et modi accusantium nam voluptate aut quaerat.', 'Ut fugiat doloribus id a.', '2019-05-13 15:19:51', '2019-05-13 15:19:51', NULL),
-(31, 'Eum quia distinctio quos quisquam.', 'Fuga deleniti in animi exercitationem.', '2019-05-13 15:19:51', '2019-05-13 15:19:51', NULL),
-(32, 'Dolorum beatae eveniet beatae et culpa distinctio.', 'Molestiae accusamus vero minima iure.', '2019-05-13 15:19:51', '2019-05-13 15:19:51', NULL);
+INSERT INTO `tags` (`id`, `title`, `slug`, `language_id`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 'tag 1', 'tag1', 2, '2019-05-18 15:02:23', '2019-05-18 15:02:23', NULL),
+(2, 'tag 2', 'tag2', 2, '2019-05-18 15:02:23', '2019-05-18 15:02:23', NULL),
+(3, 'tag 3', 'tag3', 2, '2019-05-18 15:02:23', '2019-05-18 15:02:23', NULL),
+(4, 'tag 4', 'tag4', 2, '2019-05-18 15:02:23', '2019-05-18 15:02:23', NULL),
+(5, 'tag 5', 'tag5', 2, '2019-05-18 15:02:23', '2019-05-18 15:02:23', NULL),
+(6, 'Eaque expedita et rerum.', 'Est culpa id dignissimos sed.', 2, '2019-05-18 15:02:23', '2019-05-18 15:02:23', NULL),
+(7, 'Velit quis non debitis doloribus harum impedit perferendis.', 'Vitae et pariatur ipsam alias.', 2, '2019-05-18 15:02:23', '2019-05-18 15:02:23', NULL),
+(8, 'Earum aut similique laudantium beatae.', 'Quidem hic enim ut velit.', 2, '2019-05-18 15:02:23', '2019-05-18 15:02:23', NULL),
+(9, 'Vero dolores omnis deserunt laborum nemo quae.', 'Magnam labore sapiente ad illum dolore nihil.', 1, '2019-05-18 15:02:23', '2019-05-18 15:02:23', NULL),
+(10, 'Eius iste qui veniam.', 'Libero odit voluptatem ullam voluptatem mollitia ut.', 1, '2019-05-18 15:02:23', '2019-05-18 15:02:23', NULL),
+(11, 'Rem provident harum perferendis a adipisci iure provident rem.', 'Qui ut voluptatem sint quo itaque.', 1, '2019-05-18 15:02:23', '2019-05-18 15:02:23', NULL),
+(12, 'Sunt magni cum eius alias sed magnam.', 'Vel omnis quos cumque ut architecto.', 1, '2019-05-18 15:02:23', '2019-05-18 15:02:23', NULL),
+(13, 'Consectetur qui perspiciatis deserunt ad soluta non vel.', 'Sit officiis odit consequatur sint sunt ut.', 2, '2019-05-18 15:02:23', '2019-05-18 15:02:23', NULL),
+(14, 'Consectetur tempore aut harum vel.', 'Nihil provident at non.', 1, '2019-05-18 15:02:23', '2019-05-18 15:02:23', NULL),
+(15, 'Reprehenderit non et voluptas fugit est itaque sapiente.', 'Sit quod expedita illum vel.', 2, '2019-05-18 15:02:23', '2019-05-18 15:02:23', NULL),
+(16, 'Est placeat omnis delectus illo.', 'Voluptas molestiae debitis et ipsa ut.', 1, '2019-05-18 15:02:23', '2019-05-18 15:02:23', NULL),
+(17, 'Maxime quia in cum sed.', 'Nihil velit laudantium qui.', 1, '2019-05-18 15:02:23', '2019-05-18 15:02:23', NULL),
+(18, 'Laudantium eos veritatis aut sint molestiae quia sit.', 'Asperiores voluptas dolor sit omnis.', 2, '2019-05-18 15:02:23', '2019-05-18 15:02:23', NULL),
+(19, 'Laboriosam sit voluptate fugit nam voluptatibus.', 'Voluptatem rem vitae et facere.', 2, '2019-05-18 15:02:23', '2019-05-18 15:02:23', NULL),
+(20, 'Fugit sed recusandae hic recusandae.', 'Quam qui aliquam enim tenetur eum.', 2, '2019-05-18 15:02:23', '2019-05-18 15:02:23', NULL),
+(21, 'Dolores repellat tenetur eum ex et ipsa soluta.', 'Omnis provident ipsam optio culpa autem.', 1, '2019-05-18 15:02:23', '2019-05-18 15:02:23', NULL),
+(22, 'Tempora laudantium temporibus reiciendis quisquam quisquam doloribus delectus.', 'Ratione sint voluptas non ut.', 2, '2019-05-18 15:02:23', '2019-05-18 15:02:23', NULL),
+(23, 'Et cupiditate quod excepturi itaque in ab porro nihil.', 'Officiis aut quae maiores omnis minima vel delectus.', 2, '2019-05-18 15:02:23', '2019-05-18 15:02:23', NULL),
+(24, 'Quo sit in cumque necessitatibus laudantium.', 'Molestiae maxime doloremque ex architecto natus quos nesciunt illum.', 2, '2019-05-18 15:02:23', '2019-05-18 15:02:23', NULL),
+(25, 'Excepturi et incidunt totam dolor sunt minus.', 'Occaecati et nesciunt labore.', 2, '2019-05-18 15:02:23', '2019-05-18 15:02:23', NULL),
+(26, 'Eius dolor non enim dolores debitis.', 'Omnis quasi consequatur cupiditate vitae.', 1, '2019-05-18 15:02:23', '2019-05-18 15:02:23', NULL),
+(27, 'Nobis rerum numquam earum distinctio architecto facilis aliquam.', 'Consequatur dolore esse ut sunt officia.', 1, '2019-05-18 15:02:23', '2019-05-18 15:02:23', NULL),
+(28, 'Ut temporibus officiis minima animi.', 'Aliquam quia quia cupiditate ipsam.', 1, '2019-05-18 15:02:23', '2019-05-18 15:02:23', NULL),
+(29, 'Ea est dolorem autem explicabo est enim.', 'Quisquam dicta aliquid rem labore et est.', 1, '2019-05-18 15:02:23', '2019-05-18 15:02:23', NULL),
+(30, 'Ut ea perspiciatis aut qui fugit.', 'In quia facilis est asperiores.', 2, '2019-05-18 15:02:23', '2019-05-18 15:02:23', NULL),
+(31, 'Quos illum eos ut quasi rerum sint.', 'Non mollitia voluptas suscipit ut consequatur numquam.', 2, '2019-05-18 15:02:23', '2019-05-18 15:02:23', NULL),
+(32, 'Aut nobis ab et est minima aut qui a.', 'Qui fugiat rerum dolore eveniet.', 1, '2019-05-18 15:02:23', '2019-05-18 15:02:23', NULL),
+(33, 'Aut corporis eveniet blanditiis fuga maxime impedit.', 'Porro quasi est temporibus neque sapiente consequatur.', 1, '2019-05-18 15:02:23', '2019-05-18 15:02:23', NULL),
+(34, 'Ipsum quo ratione voluptatem aliquam explicabo.', 'Omnis sed distinctio iure aut voluptas sed ratione.', 1, '2019-05-18 15:02:23', '2019-05-18 15:02:23', NULL),
+(35, 'Esse et quod consequatur iure eos officia magnam.', 'Et non harum nam saepe aut pariatur cumque.', 2, '2019-05-18 15:02:23', '2019-05-18 15:02:23', NULL);
 
 -- --------------------------------------------------------
 
@@ -311,33 +356,45 @@ CREATE TABLE `users` (
 --
 ALTER TABLE `categories`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `categories_deleted_at_index` (`deleted_at`);
+  ADD KEY `categories_deleted_at_index` (`deleted_at`),
+  ADD KEY `categories_language_id_foreign` (`language_id`);
 
 --
 -- Indexes for table `ingredients`
 --
 ALTER TABLE `ingredients`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `ingredients_deleted_at_index` (`deleted_at`);
+  ADD KEY `ingredients_deleted_at_index` (`deleted_at`),
+  ADD KEY `ingredients_language_id_foreign` (`language_id`);
+
+--
+-- Indexes for table `languages`
+--
+ALTER TABLE `languages`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `meals`
 --
 ALTER TABLE `meals`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `meals_deleted_at_index` (`deleted_at`);
+  ADD KEY `meals_deleted_at_index` (`deleted_at`),
+  ADD KEY `meals_category_id_foreign` (`category_id`),
+  ADD KEY `meals_language_id_foreign` (`language_id`);
 
 --
 -- Indexes for table `meals_ingredients`
 --
 ALTER TABLE `meals_ingredients`
-  ADD PRIMARY KEY (`id`);
+  ADD KEY `meals_ingredients_meal_id_foreign` (`meal_id`),
+  ADD KEY `meals_ingredients_ingredients_id_foreign` (`ingredients_id`);
 
 --
 -- Indexes for table `meals_tags`
 --
 ALTER TABLE `meals_tags`
-  ADD PRIMARY KEY (`id`);
+  ADD KEY `meals_tags_meal_id_foreign` (`meal_id`),
+  ADD KEY `meals_tags_tag_id_foreign` (`tag_id`);
 
 --
 -- Indexes for table `migrations`
@@ -356,7 +413,8 @@ ALTER TABLE `password_resets`
 --
 ALTER TABLE `tags`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `tags_deleted_at_index` (`deleted_at`);
+  ADD KEY `tags_deleted_at_index` (`deleted_at`),
+  ADD KEY `tags_language_id_foreign` (`language_id`);
 
 --
 -- Indexes for table `users`
@@ -373,31 +431,25 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `ingredients`
 --
 ALTER TABLE `ingredients`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+
+--
+-- AUTO_INCREMENT for table `languages`
+--
+ALTER TABLE `languages`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `meals`
 --
 ALTER TABLE `meals`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
-
---
--- AUTO_INCREMENT for table `meals_ingredients`
---
-ALTER TABLE `meals_ingredients`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
--- AUTO_INCREMENT for table `meals_tags`
---
-ALTER TABLE `meals_tags`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -409,13 +461,56 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `tags`
 --
 ALTER TABLE `tags`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `categories`
+--
+ALTER TABLE `categories`
+  ADD CONSTRAINT `categories_language_id_foreign` FOREIGN KEY (`language_id`) REFERENCES `languages` (`id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `ingredients`
+--
+ALTER TABLE `ingredients`
+  ADD CONSTRAINT `ingredients_language_id_foreign` FOREIGN KEY (`language_id`) REFERENCES `languages` (`id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `meals`
+--
+ALTER TABLE `meals`
+  ADD CONSTRAINT `meals_category_id_foreign` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `meals_language_id_foreign` FOREIGN KEY (`language_id`) REFERENCES `languages` (`id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `meals_ingredients`
+--
+ALTER TABLE `meals_ingredients`
+  ADD CONSTRAINT `meals_ingredients_ingredients_id_foreign` FOREIGN KEY (`ingredients_id`) REFERENCES `ingredients` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `meals_ingredients_meal_id_foreign` FOREIGN KEY (`meal_id`) REFERENCES `meals` (`id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `meals_tags`
+--
+ALTER TABLE `meals_tags`
+  ADD CONSTRAINT `meals_tags_meal_id_foreign` FOREIGN KEY (`meal_id`) REFERENCES `meals` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `meals_tags_tag_id_foreign` FOREIGN KEY (`tag_id`) REFERENCES `tags` (`id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `tags`
+--
+ALTER TABLE `tags`
+  ADD CONSTRAINT `tags_language_id_foreign` FOREIGN KEY (`language_id`) REFERENCES `languages` (`id`) ON DELETE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

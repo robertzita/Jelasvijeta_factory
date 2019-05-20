@@ -10,7 +10,7 @@ class Meal extends Model
 {
     use SoftDeletes;
 
-    protected $fillable = ['title', 'slug', 'description', 'category_id'];
+    protected $fillable = ['title', 'slug', 'description', 'category_id','language_id'];
 
     public function category()
     {
@@ -25,5 +25,10 @@ class Meal extends Model
     public function tags()
     {
         return $this->belongsToMany('App\Tag', 'meals_tags', 'meal_id', 'tag_id');
+    }
+
+    public function language()
+    {
+        return $this->belongsTo('App/Language')->withTrashed();
     }
 }

@@ -28,6 +28,9 @@
                     <li class="nav-item">
                         <a class="nav-link disabled" href="/tags">Tagovi</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="/api/meals">Api</a>
+                    </li>
                     
                 </ul>
             </div>

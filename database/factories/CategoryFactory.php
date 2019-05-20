@@ -2,10 +2,10 @@
 
 /* @var $factory \Illuminate\Database\Eloquent\Factory */
 
-use App\Ingredient;
+use App\Model;
 use Faker\Generator as Faker;
 
-$factory->define(Ingredient::class, function (Faker $faker) {
+$factory->define(Model::class, function (Faker $faker) {
     return [
         "title" => $faker->name,
         "slug" => $faker->name,

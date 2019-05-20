@@ -17,4 +17,9 @@ class Tag extends Model
     {
         return $this->belongsToMany('App\Meal');
     }
+
+    public function language()
+    {
+        return $this->belongsTo('App/Language')->withTrashed();
+    }
 }
